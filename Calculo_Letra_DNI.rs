@@ -115,15 +115,15 @@ fn main(){
 	let mut i = 0;
 
 	while i != 99 {
-		let _preguntar_dni = preguntar_dni().trim().parse::<i64>().unwrap(); // Llamamos a la funcion que pregunte el DNI
-		i = n;
+		let preguntar_dni = preguntar_dni().trim().parse::<i64>().unwrap(); // Llamamos a la funcion que pregunte el DNI
+		i = preguntar_dni;
 		let resto_dni = resto_dni(i).trim().parse::<i64>().unwrap() ; // El calculo de la letra del DNI se determina por el resto de dividir el numero entre 23
-		let _letra_dni = determinar_letra_dni(resto_dni, i, n); // Aqui determinamos la letra de nuestro DNI y la imprimimos junto a nuestro numero de 8 digitos
+		let _letra_dni = determinar_letra_dni(resto_dni, i, preguntar_dni); // Aqui determinamos la letra de nuestro DNI y la imprimimos
 
-		if i == 99{ 
-			println!("Operacion abortada por el usuario"); // En caso de que el usuario quiera detener la ejecucion
+		if i == 99{
+			println!("Operacion abortada por el usuario"); // Imprimir en caso de que el usuario detenga la ejecucion
 		}
 
-}
+	}
 
 }

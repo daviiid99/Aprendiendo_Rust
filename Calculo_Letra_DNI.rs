@@ -7,18 +7,13 @@ fn preguntar_dni() -> String {
 
 }
 
-fn main(){
+fn resto_dni(dni:i64)-> String{
+	let resto = dni % 23;
+	resto.to_string()
 
-	let mut i = 0;
+}
 
-	while i != 99 {
-		let n = preguntar_dni().trim().parse::<i64>().unwrap(); // Llamamos a la funcion que pregunte el DNI
-		i = n;
-		let resto_dni = i % 23; // El calculo de la letra del DNI se determina por el resto de dividir el numero entre 23
-
-		if i == 99{
-			println!("Operacion abortada por el usuario");
-		}
+fn determinar_letra_dni(resto_dni:i64, i:i64, n:i64){
 
 		if resto_dni == 0 {
 			println!("Tu dni es {}T\n", n);
@@ -112,6 +107,22 @@ fn main(){
 			println!("Tu dni es {}E\n", n);
 		}
 
+
+}
+
+fn main(){
+
+	let mut i = 0;
+
+	while i != 99 {
+		let n = preguntar_dni().trim().parse::<i64>().unwrap(); // Llamamos a la funcion que pregunte el DNI
+		i = n;
+		let resto_dni = resto_dni(i).trim().parse::<i64>().unwrap() ; // El calculo de la letra del DNI se determina por el resto de dividir el numero entre 23
+		let _letra_dni = determinar_letra_dni(resto_dni, i, n);
+
+		if i == 99{
+			println!("Operacion abortada por el usuario");
+		}
 
 }
 

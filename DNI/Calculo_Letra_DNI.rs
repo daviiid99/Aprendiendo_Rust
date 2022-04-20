@@ -14,96 +14,98 @@ fn resto_dni(dni:i64)-> String{
 }
 
 fn determinar_letra_dni(resto_dni:i64, i:i64, n:i64){
+	let terminacion = ["T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S","Q","V","H","L","C","K","E"];
+	let posicion = terminacion[resto_dni];
 
 		if resto_dni == 0 {
 			println!("Tu dni es {}T\n", n);
 		}
 
-		if resto_dni == 1 {
+		else if resto_dni == 1 {
 			println!("Tu dni es {}R\n", n);
 		}
 
-		if resto_dni == 2 {
+		else if resto_dni == 2 {
 			println!("Tu dni es {}W\n", n);
 		}
 
-		if resto_dni == 3 {
+		else if resto_dni == 3 {
 			println!("Tu dni es {}A\n", n);
 		}
 
-		if resto_dni == 4 {
+		else if resto_dni == 4 {
 			println!("Tu dni es {}G\n", n);
 		}
 
-		if resto_dni == 5 {
+		else if resto_dni == 5 {
 			println!("Tu dni es {}M\n", n);
 		}
 
-		if resto_dni == 6 {
+		else if resto_dni == 6 {
 			println!("Tu dni es {}Y\n", n);
 		}
 
-		if resto_dni == 7 && i != 99 {
+		else if resto_dni == 7 && i != 99 {
 			println!("Tu dni es {}F\n", n);
 		}
 
-		if resto_dni == 8 {
+		else if resto_dni == 8 {
 			println!("Tu dni es {}P\n", n);
 		}
 
-		if resto_dni == 9 {
+		else if resto_dni == 9 {
 			println!("Tu dni es {}D\n", n);
 		}
 
-		if resto_dni == 10 {
+		else if resto_dni == 10 {
 			println!("Tu dni es {}X\n", n);
 		}
 
-		if resto_dni == 11 {
+		else if resto_dni == 11 {
 			println!("Tu dni es {}B\n", n);
 		}
 
-		if resto_dni == 12 {
+		else if resto_dni == 12 {
 			println!("Tu dni es {}N\n", n);
 		}
 
-		if resto_dni == 13 {
+		else if resto_dni == 13 {
 			println!("Tu dni es {}J\n", n);
 		}
 
-		if resto_dni == 14 {
+		else if resto_dni == 14 {
 			println!("Tu dni es {}Z\n", n);
 		}
 
-		if resto_dni == 15 {
+		else if resto_dni == 15 {
 			println!("Tu dni es {}S\n", n);
 		}
 
-		if resto_dni == 16 {
-			println!("Tu dni es {}Q\n", n);
+		else if resto_dni == 16 {
+			println!("Tu dni es {}{}\n", n, posicion);
 		}
 
-		if resto_dni == 17 {
+		else if resto_dni == 17 {
 			println!("Tu dni es {}V\n", n);
 		}
 
-		if resto_dni == 18 {
+		else if resto_dni == 18 {
 			println!("Tu dni es {}H\n", n);
 		}
 
-		if resto_dni == 19 {
+		else if resto_dni == 19 {
 			println!("Tu dni es {}L\n", n);
 		}
 
-		if resto_dni == 20 {
+		else if resto_dni == 20 {
 			println!("Tu dni es {}C\n", n);
 		}
 
-		if resto_dni == 21 {
+		else if resto_dni == 21 {
 			println!("Tu dni es {}K\n", n);
 		}
 
-		if resto_dni == 22 {
+		else if resto_dni == 22 {
 			println!("Tu dni es {}E\n", n);
 		}
 
